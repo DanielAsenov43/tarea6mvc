@@ -1,0 +1,51 @@
+body {
+    background-color: var(--color-dark);
+    color: var(--color-dark);
+}
+
+main {
+    .error-container {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        background-color: white;
+        width: 40vw;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+
+            h1 {
+                margin: auto;
+                font-size: 2.5rem;
+            }
+
+            img {
+                width: 125px;
+                user-select: none;
+                animation: pizza 2s ease-in-out infinite;
+            }
+        }
+
+        .bottom {
+            text-align: center;
+            padding: 5px 20px;
+        }
+    }
+}
+
+@keyframes pizza {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0px); }
+}
